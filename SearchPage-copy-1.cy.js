@@ -11,4 +11,4 @@ export class SearchPage {
   verifyResults() {
     cy.get('.s-search-results').should('be.visible'); // Search results container
   }
-}
+} 
