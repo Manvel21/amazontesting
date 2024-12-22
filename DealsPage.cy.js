@@ -1,14 +1,14 @@
 export class DealsPage {
   visit() {
-    cy.visit('https://www.amazon.com');  // Visit the Amazon homepage
+    cy.visit('https://www.amazon.com');  // Այց amazon-ի գլխավոր էջ
   }
 
   clickTodaysDeals() {
-    cy.get('a[href="/gp/goldbox?ref_=nav_cs_gb"]').click({ force: true }); // Force click if overlay is blocking
+    cy.get('a[href="/gp/goldbox?ref_=nav_cs_gb"]').click({ force: true }); 
   }
 
   verifyDealsPage() {
-    cy.url().should('include', '/gp/goldbox');  // Verify we are on the 'Today's Deals' page
-    cy.get('.a-declarative').should('be.visible');  // Ensure deals section is visible
+    cy.url().should('include', '/gp/goldbox');  //Համոզվենք որ գտնվում ենք գործարքների էջում
+    cy.get('.a-declarative').should('be.visible');  // Համոզվեք, որ գործարքների հատվածը տեսանելի է
   }
 }
