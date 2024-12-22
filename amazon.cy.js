@@ -42,12 +42,14 @@ describe('Amazon Today\'s Deals Tests', () => {
   });
 
   it('should navigate to Today\'s Deals and verify the deals page', () => {
-        cy.get('.glow-toaster').should('not.exist');  // Wait for any toaster or flyout to disappear
+    // Test Description: Navigate to Today's Deals and verify the page loads correctly.
+    cy.get('.glow-toaster').should('not.exist');  // Wait for any toaster or flyout to disappear
     dealsPage.clickTodaysDeals();  // Click the "Today's Deals" link with force if necessary
   });
 
   it('should display deals on the "Today\'s Deals" page', () => {
-      cy.get('.glow-toaster').should('not.exist');  // Wait for toaster to disappear
+    // Test Description: Verify that deal items are visible on the "Today's Deals" page.
+    cy.get('.glow-toaster').should('not.exist');  // Wait for toaster to disappear
     dealsPage.clickTodaysDeals();
   });
 });
